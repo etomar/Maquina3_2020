@@ -7,15 +7,8 @@ public class DispensadorDeBotes {
 	
 	private int botes; 
 
-    public DispensadorDeBotes(int b){
-    	
-        iniciarDispensadorDeBotes(b);
-
-    }    
-    //Numero actual de botes.
-    /* Inicializa el dispensador y pone i botes en él*/
-    /* Entrada: int i, numero de botes en el dispensador*/
-    /* Salidas: Ninguna */
+     
+    
     
     public void iniciarDispensadorDeBotes (int i){
         botes = i;
