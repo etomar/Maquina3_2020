@@ -14,6 +14,13 @@ public class MaquinaBebidas {
     private DispensadorDeBotes cola, limon, naranja, tonica, agua;
     private float precio;
     public void iniciarMaquinaDeBebidas (float m, int b, float pvp){
+        contador = new ContadorDeMonedas();
+        cola = new DispensadorDeBotes();
+        limon = new DispensadorDeBotes();
+        naranja = new DispensadorDeBotes();
+        tonica = new DispensadorDeBotes();
+        agua = new DispensadorDeBotes();
+        
         contador.IniciarContadorDeMonedas(m);
         cola.iniciarDispensadorDeBotes(b);
         limon.iniciarDispensadorDeBotes(b);
