@@ -33,7 +33,7 @@ public class ContadorDeMonedas {
         /* pasa a engrosar el disponible de la maquina 
         /* Entradas: float c, el precio del producto*/
         /* Salidas: el cambio, negativo si falta dinero */ 
-        this.cantidad=cantidad+m;
+        this.cantidad+=m;
     }
     
     public float DarCambioDe (float c){
