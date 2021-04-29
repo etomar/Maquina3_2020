@@ -41,9 +41,11 @@ public class ContadorDeMonedas {
 		if(cantidad-c>0) {
 			devolver=cantidad-c;
 			disponible-=devolver;
+                        cantidad=devolver;
 		}
 		else if(cantidad-c==0) {
 			devolver=0;
+                        cantidad=devolver;
 		}else
 			devolver=-1;
 			return devolver;
