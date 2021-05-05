@@ -6,35 +6,56 @@
 package maquina3_2020;
 
 /**
- *
- * @author Lliurex
+ *Veremos el saldo de la maquina y el dinero introducido por el cliente ycomo variaran estos conforme se hagan compras
+ * @author Cristina
+ * @see package.DispensadorDeBotes;
+ * @see package.MaquinaDeBebidas;
+ * @version 1.0
  */
 public class ContadorDeMonedas {
-	private float cantidad; //Dinero introducido por el usuario actual.
-	private float disponible; //Dinero almacenado en la maquina, se utiliza para dar cambio.
-	/* Inicializa el objeto y fija el cambio inicialmente disponible. */ 
-	/* Entradas: float i, saldo inicialmente disponible para cambios */ 
-	/* Salidas: Ninguna*/
+        /**
+         * cantidad=Dinero introducido por el usuario actual.
+         */
+	private float cantidad; 
+        /**
+         * disponible=Dinero almacenado en la maquina, se utiliza para dar cambio.
+         */
+	private float disponible; 
+        /**
+         * Constructor de la clase con parametro 
+         * Inicializa el objeto y fija el cambio inicialmente disponible.
+         * @param i saldo inicialmente disponible para cambios
+         */
 	public ContadorDeMonedas(float i) {
 		this.disponible=i;
 	}
-	/* Informa sobre el saldo actual del cliente */ 
-	/* Entradas: Ninguna */
-	/* Salidas: float, el saldo del cliente */ 
+        /**
+         * Informacion del saldo del cliente
+         * @return float,el saldo del cliente
+         */
 	public float saldo () {
 		return cantidad;
 	}
-	/* Insertar la moneda m */
-	/* Entrada: float m, la cantidad de dinero introducida */ 
-	/* Salidas: Ninguna */
+        /**
+         * Aumenta el saldo del cliente conforme introduzca más dinero
+         * Insertar la moneda m 
+         * @param m la cantidad de dinero introducida
+         */
 	public void insertarMoneda (float m) {
 		cantidad+=m;
 	}
-	/* Devuelve el cambio, si es posible */ 
-	/* Una vez entregado el cambio, el dinero introducido por el cliente */
-	/* pasa a engrosar el disponible de la maquina /* 
-	 * Entradas: float c, el precio del producto*/
-	/* Salidas: el cambio, negativo si falta dinero */ 
+        /**
+         * Devuelve el cambio, si es posible
+         *  Una vez entregado el cambio, el dinero introducido por el cliente
+         *  pasa a engrosar el disponible de la maquina
+         * @param c el precio del producto
+         * @return<ul>
+         *<li>>0:hay devolucion tras la compra</li>
+         * <li>=0:devuelve 0</li>
+         * <li><0:no hay dinero suficiente para comprar el producto y devuelve -1 </li>
+         * </ul>
+         * 
+         */
 	public float darCambioDe (float c) {
 		float devolver;
 		disponible+=cantidad;
@@ -51,10 +72,11 @@ public class ContadorDeMonedas {
 			return devolver;
 		
 	}
-	/* El cliente recupera el dinero introducido si todavia */ 
-	/* no se ha realizado la venta */ 
-	/* Entradas: Ninguna */ 
-	/* Salidas: float, la cantidad devuelta */
+        /**
+         * El cliente recupera el dinero introducido si todavia
+         * no se ha realizado la venta 
+         * @return float la cantidad devuelta
+         */
 	public float retornar () {
 		float devolver=cantidad;
 		this.cantidad=0.0f;
