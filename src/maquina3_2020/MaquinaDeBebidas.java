@@ -6,21 +6,26 @@
 package maquina3_2020;
 
 /**
- *
+ * Veremos la información de la máquina de bebidas, el sistema para meter monedas y el sistema para elegir el tipo de bebida
  * @author Adrián Miralles Gómez
  * Equipo -> máquina 3.
+ * @see maquina3_2020.DispensadorDeBotes
+ * @see maquina3_2020.ContadorDeMonedas
+ * @see maquina3_2020.Maquina3_2020
+ * @see maquina3_2020.Test_Maquina3
+ * @version 1.0
  */
 public class MaquinaDeBebidas {
-    private ContadorDeMonedas contador; //Contador de monedas de la maquina	
-	private DispensadorDeBotes cola,limon,naranja,tonica,	agua; //Cantidad de botes en el dispensador
-	private float precio;	//Precio de las bebidas(común para todas)
-	
-	/*
-	Inicializa la maquina y todos los elementos asociados
-	Entradas: float m, cantidad inicial de monedas para el	cambio
-	int b, cantidad inicial de botes en los dispensadores
-	float pvp, precio de las bebidas
-	Salidas: Ninguna 
+        private ContadorDeMonedas contador; 
+        /**
+        * Contador de monedas de la maquina
+        */
+        private DispensadorDeBotes cola,limon,naranja,tonica,	agua;
+        /**
+        *Cantidad de botes en el dispensador
+        */
+	private float precio;	/**
+        *Precio de las bebidas(común para todas)
 	*/
 	public MaquinaDeBebidas (float m, int b, float pvp) {
 		contador = new ContadorDeMonedas (m);
@@ -33,14 +38,14 @@ public class MaquinaDeBebidas {
 		
 		precio = pvp;
 	}
-	
-	/*
-	Responder a una acción del usuario. Discrimina el tipo de
-	accion
-	y utiliza las operaciones privadas
-	Entradas: char o, la orden del usuario
-	Salidas: Ninguna 
-	*/
+        /** Constructor MaquinaDeBebidas   
+	*Inicializa la maquina y todos los elementos asociados
+	*Entradas:
+        *@param m cantidad inicial de monedas para el cambio
+	*@param b cantidad inicial de botes en los dispensadores
+	*@param pvp precio de las bebidas 
+        *Salidas: Ninguna 
+	*/ 
 	public void darOrden (char o){
 		if (o=='A' ||o=='B'||o=='C'||o=='D'||o=='E'||o=='R') {
 			ordenMonedas(o);
@@ -48,11 +53,10 @@ public class MaquinaDeBebidas {
 			ordenSeleccion(o);
 		}	
 	}
-		
-	/*
-	Visualiza la informacion de interes sobre la maquina botes en cada dispensador, precio de las bebidas, saldo del cliente.
-	Entradas: Ninguna
-	Salidas: Ninguna 
+        /** Dar orden
+	*Responder a una acción del usuario. Discrimina el tipo de accion y utiliza las operaciones privadas
+	*@param o la orden del usuario
+        *Salidas: Ninguna 
 	*/
 	public void visualizarMaquina () {
 		System.out.println("VISUALIZANDO MÁQUINA");
@@ -64,7 +68,11 @@ public class MaquinaDeBebidas {
 		System.out.println("Agua: STOCK -> "+ agua.botesDisponibles()+" PRECIO -> "+precio);
 		System.out.println("\nSALDO DISPONIBLE DEL CLIENTE: " + contador.saldo());
 	}
-	
+        /** Visualizar maquina
+	*Visualiza la informacion de interes sobre la maquina botes en cada dispensador, precio de las bebidas, saldo del cliente.
+        *Entradas: Ninguna
+        *Salidas: Ninguna 
+	*/
 	private void ordenMonedas (char o) {
 		switch (o) {
 		case 'A': 
@@ -89,12 +97,12 @@ public class MaquinaDeBebidas {
 			break;		
 		}	
 	}
-	
-	/*
-	Realiza las acciones relacionadas con la selección de una bebida 
-	Entradas: char o, la orden del usuario
-	Salidas: Ninguna 
-	*/
+	/** Orden monedas
+        *Realiza las acciones relacionadas con la introducción de monedas
+        *@param o la orden del usuario
+        *Salidas: Ninguna 
+        */ 
+
 	private void ordenSeleccion (char o) {
 		switch (o) {
 		case '1': 
@@ -155,4 +163,9 @@ public class MaquinaDeBebidas {
 			}
 		}
 	}
+        /** Orden seleccion
+	*Realiza las acciones relacionadas con la selección de una bebida 
+	*@param o la orden del usuario
+	*Salidas: Ninguna 
+	*/
 }
