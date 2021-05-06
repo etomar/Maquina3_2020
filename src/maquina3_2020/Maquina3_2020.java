@@ -20,7 +20,7 @@ public class Maquina3_2020 {
      */
     public static void main(String[] args) throws IOException {
         //Scanner tec = new Scanner(System.in);
-        MaquinaBebidas mi_maquina = new MaquinaBebidas();
+        /*MaquinaBebidas mi_maquina = new MaquinaBebidas();
 	char c;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
 	//inicializo la maquina con:
@@ -40,6 +40,7 @@ public class Maquina3_2020 {
 		mi_maquina.darOrden ( c );
 	}
 	while ( ( c != 'f' ) && ( c != 'F' ) );
+    */
     }
 
     

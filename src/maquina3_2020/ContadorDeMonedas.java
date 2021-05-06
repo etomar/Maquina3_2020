@@ -8,8 +8,10 @@ package maquina3_2020;
 /**
  *Veremos el saldo de la maquina y el dinero introducido por el cliente ycomo variaran estos conforme se hagan compras
  * @author Cristina
- * @see package.DispensadorDeBotes;
- * @see package.MaquinaDeBebidas;
+ * @see maquina3_2020.DispensadorDeBotes
+ * @see maquina3_2020.MaquinaDeBebidas
+ * @see maquina3_2020.Maquina3_2020
+ * @see maquina3_2020.Test_Maquina3
  * @version 1.0
  */
 public class ContadorDeMonedas {
@@ -50,9 +52,9 @@ public class ContadorDeMonedas {
          *  pasa a engrosar el disponible de la maquina
          * @param c el precio del producto
          * @return<ul>
-         *<li>>0:hay devolucion tras la compra</li>
-         * <li>=0:devuelve 0</li>
-         * <li><0:no hay dinero suficiente para comprar el producto y devuelve -1 </li>
+         *<li> mayor que 0:hay devolucion tras la compra</li>
+         * <li>igual a 0:devuelve 0</li>
+         * <li>menor que 0:no hay dinero suficiente para comprar el producto y devuelve -1 </li>
          * </ul>
          * 
          */

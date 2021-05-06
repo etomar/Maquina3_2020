@@ -3,6 +3,10 @@ package maquina3_2020;
 /**
  * @author Martin R. Rinn Lacuesta
  * @version 1
+ * @see maquina3_2020.ContadorDeMonedas
+ * @see maquina3_2020.MaquinaDeBebidas
+ * @see maquina3_2020.Maquina3_2020
+ * @see maquina3_2020.Test_Maquina3
  */
 
 class DispensadorDeBotes {

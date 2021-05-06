@@ -8,7 +8,7 @@ package maquina3_2020;
 /**
  * Veremos la información de la máquina de bebidas, el sistema para meter monedas y el sistema para elegir el tipo de bebida
  * @author Adrián Miralles Gómez
- * Equipo -> máquina 3.
+ * Equipo: máquina 3.
  * @see maquina3_2020.DispensadorDeBotes
  * @see maquina3_2020.ContadorDeMonedas
  * @see maquina3_2020.Maquina3_2020
@@ -37,27 +37,29 @@ public class MaquinaDeBebidas {
 		agua = new DispensadorDeBotes(b);
 		
 		precio = pvp;
-	}
         /** Constructor MaquinaDeBebidas   
-	*Inicializa la maquina y todos los elementos asociados
-	*Entradas:
+        *Inicializa la maquina y todos los elementos asociados
+        *Entradas:
         *@param m cantidad inicial de monedas para el cambio
-	*@param b cantidad inicial de botes en los dispensadores
-	*@param pvp precio de las bebidas 
+        *@param b cantidad inicial de botes en los dispensadores
+        *@param pvp precio de las bebidas 
         *Salidas: Ninguna 
-	*/ 
+        */ 
+	}
+        
 	public void darOrden (char o){
 		if (o=='A' ||o=='B'||o=='C'||o=='D'||o=='E'||o=='R') {
 			ordenMonedas(o);
 		}else if(o=='1' ||o=='2'||o=='3'||o=='4'||o=='5'  ) {
 			ordenSeleccion(o);
 		}	
-	}
         /** Dar orden
 	*Responder a una acción del usuario. Discrimina el tipo de accion y utiliza las operaciones privadas
 	*@param o la orden del usuario
         *Salidas: Ninguna 
 	*/
+	}
+     
 	public void visualizarMaquina () {
 		System.out.println("VISUALIZANDO MÁQUINA");
 		System.out.println();
@@ -67,12 +69,13 @@ public class MaquinaDeBebidas {
 		System.out.println("Tonica: STOCK -> "+ tonica.botesDisponibles()+" PRECIO -> "+precio);
 		System.out.println("Agua: STOCK -> "+ agua.botesDisponibles()+" PRECIO -> "+precio);
 		System.out.println("\nSALDO DISPONIBLE DEL CLIENTE: " + contador.saldo());
-	}
         /** Visualizar maquina
 	*Visualiza la informacion de interes sobre la maquina botes en cada dispensador, precio de las bebidas, saldo del cliente.
         *Entradas: Ninguna
         *Salidas: Ninguna 
 	*/
+	}
+
 	private void ordenMonedas (char o) {
 		switch (o) {
 		case 'A': 
@@ -95,13 +98,14 @@ public class MaquinaDeBebidas {
 		case 'R':
 			contador.retornar();
 			break;		
-		}	
-	}
-	/** Orden monedas
+		}
+        /** Orden monedas
         *Realiza las acciones relacionadas con la introducción de monedas
         *@param o la orden del usuario
         *Salidas: Ninguna 
         */ 
+	}
+	
 
 	private void ordenSeleccion (char o) {
 		switch (o) {
@@ -162,10 +166,11 @@ public class MaquinaDeBebidas {
 				System.out.println("NO QUEDA STOCK DE AGUA");
 			}
 		}
-	}
-        /** Orden seleccion
+         /** Orden seleccion
 	*Realiza las acciones relacionadas con la selección de una bebida 
 	*@param o la orden del usuario
 	*Salidas: Ninguna 
 	*/
+	}
+       
 }
