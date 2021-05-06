@@ -1,25 +1,33 @@
-//autor: Martin R. Rinn Lacuesta
-//fecha: 06/05/2021
-//descripcio: clases encargadas de proporcionar un valor a 
-//los botes y determinar si la maquina esta vacia o llena.
-
-
 package maquina3_2020;
 
+/**
+ * @author Martin R. Rinn Lacuesta
+ * @version 1
+ */
 
 class DispensadorDeBotes {
 
-	private int botes; //Valor numerico indicando la cantidad de botes que hay.
+	private int botes; 
+        
+        /**
+         * @param botes usado para aplicarle valores numericos o numero de botes en la máquina.
+         */
 	
 	public DispensadorDeBotes(int i) {
 		
-		botes = i; //Le da un valor numerico a los botes.
+		botes = i; 
+                
+        /**
+         * @param i Permite aplicarle un valor numerico a botes, para que este no sea 0.
+         */        
 	
 	}
 	public boolean pulsarBoton(){
-		
-            //Clase encargada de verificar si hay botes suficientes en la maquina
-           //Si la misma sale true, es que hay suficientes y false en caso contrario.
+	
+        /**
+         * @return false En caso de que no hayan botes en la maquina, se devuelve un boolean false.
+         * @return true En caso de que hayan botes en la maquina, la clase devuelve un boolean true.
+         */    
             
 		if(botes == 0) {
 			
@@ -31,7 +39,9 @@ class DispensadorDeBotes {
 	}
 	public int botesDisponibles(){
 		
-            //Devuelve el total de botes restantes en la maquina.
+        /**
+         * @return botes Encargado de devolver el numero total de botes en la máquina.
+         */    
             
 		return botes;
 			
