@@ -6,7 +6,7 @@
 package maquina3_2020;
 
 /**
- *Veremos el saldo de la maquina y el dinero introducido por el cliente ycomo variaran estos conforme se hagan compras
+ * Veremos el saldo de la maquina y el dinero introducido por el cliente ycomo variaran estos conforme se hagan compras
  * @author Cristina
  * @see maquina3_2020.DispensadorDeBotes
  * @see maquina3_2020.MaquinaDeBebidas

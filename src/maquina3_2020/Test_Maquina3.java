@@ -7,9 +7,13 @@ package maquina3_2020;
 import java.io.*;
 
 /**
- *
+ * El main que funciona bien.
  * @author Adrián Miralles Gómez
- * 
+ * @version 1.0
+ * @see maquina3_2020.ContadorDeMonedas
+ * @see maquina3_2020.MaquinaDeBebidas
+ * @see maquina3_2020.Maquina3_2020
+ * @see maquina3_2020.DispensadorDeBotes
  * Te hago este main, distinto al que ya está en el repositorio, porque ese tenia algunas cosas mal, pero no quería modificartelo directamente sin decírtelo.
  * Por ejemplo:
  * - En la linea 23 creas un objeto de la clase MaquinaBebida, y la clase realmente se llama MaquinaDeBebidas.
