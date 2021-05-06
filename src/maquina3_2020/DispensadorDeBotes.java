@@ -1,8 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package maquina3_2020;
 
 /**
+ * Para manejar la dispesación de los botes
  * @author Martin R. Rinn Lacuesta
- * @version 1
+ * @version 1.0
  * @see maquina3_2020.ContadorDeMonedas
  * @see maquina3_2020.MaquinaDeBebidas
  * @see maquina3_2020.Maquina3_2020
